@@ -1,0 +1,427 @@
+/* BuildForward - Civil Engineering Homepage Hero */
+
+/* BASE STYLES */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f7fa;
+  color: #172b3f;
+}
+
+/* HEADER */
+.site-header {
+  background-color: #10263d;
+  color: #ffffff;
+  padding: 1rem 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 2px solid #ffbd35;
+  border-radius: 8px;
+  color: #ffbd35;
+  font-size: 0.9rem;
+}
+
+.brand-dot {
+  color: #ffbd35;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+nav a {
+  color: #eaf0f6;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffbd35;
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 590px;
+  background-image:
+    linear-gradient(90deg, rgba(8, 24, 40, 0.88), rgba(8, 24, 40, 0.45) 58%, rgba(8, 24, 40, 0.12)),
+    url("images/civil-engineering-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem 8%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 690px;
+  color: #ffffff;
+}
+
+.eyebrow,
+.section-label {
+  color: #ffbd35;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+  line-height: 1.06;
+  margin-bottom: 1.3rem;
+  font-weight: 800;
+}
+
+.hero-content h1 span {
+  color: #ffbd35;
+}
+
+.hero-description {
+  max-width: 610px;
+  font-size: 1.18rem;
+  line-height: 1.65;
+  color: #f1f5f9;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  display: inline-block;
+  background-color: #ffbd35;
+  color: #10263d;
+  padding: 1rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 800;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-button span {
+  margin-left: 0.5rem;
+}
+
+.hero-button:hover {
+  background-color: #ffd16d;
+  transform: translateY(-3px);
+}
+
+.hero-caption {
+  position: absolute;
+  right: 6%;
+  bottom: 1.3rem;
+  color: #ffffff;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+/* ABOUT SECTION */
+.content-section {
+  width: 86%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 5rem 0 4rem;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.content-section .section-label,
+.projects-section .section-label {
+  color: #b77800;
+}
+
+.content-section h2,
+.projects-section h2 {
+  color: #10263d;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+}
+
+.content-section p {
+  max-width: 900px;
+  margin-bottom: 1rem;
+}
+
+/* PROJECT AREAS */
+.projects-section {
+  background-color: #e9eef3;
+  padding: 4rem 7%;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.7rem;
+  border-top: 4px solid #ffbd35;
+  box-shadow: 0 8px 24px rgba(16, 38, 61, 0.07);
+}
+
+.card-number {
+  color: #b77800;
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+.project-card h3 {
+  color: #10263d;
+  font-size: 1.25rem;
+  margin: 0.8rem 0;
+}
+
+.project-card p {
+  line-height: 1.6;
+  color: #526273;
+}
+
+/* FOOTER */
+footer {
+  background-color: #10263d;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.8rem 1rem;
+  line-height: 1.5;
+}
+
+.footer-small {
+  color: #bdc9d5;
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 700px) {
+  .site-header {
+    flex-direction: column;
+    padding: 1rem 5%;
+  }
+
+  nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.2rem;
+  }
+
+  .hero {
+    min-height: 540px;
+    padding: 4rem 7%;
+    background-position: 62% center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.65rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-caption {
+    right: 7%;
+    font-size: 0.7rem;
+  }
+
+  .content-section {
+    width: 86%;
+    padding: 3.5rem 0;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-section {
+    padding: 3.5rem 7%;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand {
+    font-size: 1.15rem;
+  }
+
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-button {
+    padding: 0.9rem 1.2rem;
+  }
+}
+
+
+/* SHARED INNER PAGES */
+.inner-page {
+  min-height: 65vh;
+  padding-bottom: 4rem;
+}
+
+.page-heading {
+  background: #e9eef3;
+  padding: 4.5rem 8%;
+  text-align: center;
+}
+
+.page-heading h1 {
+  color: #10263d;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.12;
+  margin: 0.6rem auto 1rem;
+  max-width: 850px;
+}
+
+.page-heading > p:last-child {
+  color: #526273;
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.info-panel {
+  width: 86%;
+  max-width: 1050px;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(16, 38, 61, 0.07);
+  line-height: 1.7;
+}
+
+.info-panel h2,
+.project-detail h2 {
+  color: #10263d;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.info-panel p:last-child {
+  margin-bottom: 0;
+}
+
+.project-list {
+  width: 86%;
+  max-width: 1100px;
+  margin: 3rem auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.project-detail {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) 1.2fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(16, 38, 61, 0.07);
+}
+
+.project-detail img,
+.project-placeholder {
+  width: 100%;
+  min-height: 190px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project-placeholder {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: #dce5ed;
+  color: #10263d;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.project-detail p {
+  color: #526273;
+  line-height: 1.7;
+}
+
+.contact-layout {
+  width: 86%;
+  max-width: 1050px;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.contact-layout .info-panel {
+  width: 100%;
+  margin: 0;
+}
+
+.topic-list {
+  padding-left: 1.3rem;
+  margin: 1rem 0 1.5rem;
+  line-height: 1.9;
+}
+
+.site-header nav a[aria-current="page"] {
+  color: #ffbd35;
+}
+
+@media (max-width: 700px) {
+  .page-heading {
+    padding: 3rem 7%;
+  }
+
+  .project-detail,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail img,
+  .project-placeholder {
+    min-height: 170px;
+  }
+}
